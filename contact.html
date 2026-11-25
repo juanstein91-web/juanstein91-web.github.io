@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Juan Stein</title>
+  <meta name="description" content="Coordonnées de Juan Stein.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+
+  <!-- En-tête commun à toutes les pages -->
+  <header class="entete">
+    <div class="conteneur">
+      <a class="logo" href="index.html" data-nom>Juan Stein</a>
+      <button id="menu-bouton" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav id="menu" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="competences.html">Compétences</a>
+        <a href="veille.html">Veille</a>
+        <a href="contact.html" class="actif" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="conteneur">
+    <div class="intro">
+      <p class="etiquette">Contact</p>
+      <h1>Me contacter</h1>
+      <p class="muted">Pour une question sur mon parcours, une alternance ou une poursuite d'études. Basé à <span id="ville"></span>.</p>
+    </div>
+    <div class="grille" id="contact"></div>
+    <div class="boutons"><a class="btn btn-plein" id="btn-mail" href="#">M'écrire un e-mail</a></div>
+  </main>
+
+  <!-- Pied de page (rempli par script.js) -->
+  <footer><div class="conteneur" id="pied"></div></footer>
+
+  <!-- data.js contient le contenu, script.js l'affiche -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Stein | Portfolio BTS SIO SISR</title>
+  <meta name="description" content="Portfolio de Juan Stein, étudiant en BTS SIO option SISR en alternance.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="accueil">
+
+  <!-- En-tête commun à toutes les pages -->
+  <header class="entete">
+    <div class="conteneur">
+      <a class="logo" href="index.html" data-nom>Juan Stein</a>
+      <button id="menu-bouton" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav id="menu" aria-label="Navigation principale">
+        <a href="index.html" class="actif" aria-current="page">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="competences.html">Compétences</a>
+        <a href="veille.html">Veille</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="conteneur">
+    <section class="hero">
+      <div>
+        <p class="etiquette">BTS SIO · option SISR</p>
+        <h1 id="titre"></h1>
+        <p class="muted" id="accroche"></p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="realisations.html">Voir mes réalisations</a>
+          <a class="btn btn-contour" href="a-propos.html">Mon parcours</a>
+          <a class="btn btn-contour" id="btn-cv" href="#" target="_blank" rel="noopener">Mon CV (PDF)</a>
+        </div>
+      </div>
+      <img class="photo" id="photo" src="" alt="">
+    </section>
+
+    <h2>En bref</h2>
+    <div class="grille" id="cartes"></div>
+  </main>
+
+  <!-- Pied de page (rempli par script.js) -->
+  <footer><div class="conteneur" id="pied"></div></footer>
+
+  <!-- data.js contient le contenu, script.js l'affiche -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

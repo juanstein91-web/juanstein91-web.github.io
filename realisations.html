@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réalisations | Juan Stein</title>
+  <meta name="description" content="Réalisations professionnelles de Juan Stein, BTS SIO SISR.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="realisations">
+
+  <!-- En-tête commun à toutes les pages -->
+  <header class="entete">
+    <div class="conteneur">
+      <a class="logo" href="index.html" data-nom>Juan Stein</a>
+      <button id="menu-bouton" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav id="menu" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="realisations.html" class="actif" aria-current="page">Réalisations</a>
+        <a href="competences.html">Compétences</a>
+        <a href="veille.html">Veille</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="conteneur">
+    <div class="intro">
+      <p class="etiquette">Réalisations</p>
+      <h1>Mes réalisations</h1>
+      <p class="muted">Travaux réalisés en formation et en entreprise. Chaque réalisation suit le même gabarit en 8 rubriques, avec ses preuves.</p>
+    </div>
+    <div id="liste-realisations" style="display:grid; gap:18px;"></div>
+  </main>
+
+  <!-- Pied de page (rempli par script.js) -->
+  <footer><div class="conteneur" id="pied"></div></footer>
+
+  <!-- data.js contient le contenu, script.js l'affiche -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
