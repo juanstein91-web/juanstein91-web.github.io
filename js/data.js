@@ -17,7 +17,7 @@ const SITE = {
     prenom: "Juan",
     nom: "Stein",
     titre: "Étudiant en BTS SIO option SISR, en alternance",
-    accroche: "Étudiant au CFA ITIS d'Évry, alternant à la DSI de ManpowerGroup. Je me forme à l'administration des systèmes et des réseaux.",
+    accroche: "Étudiant au CFA ITIS d'Évry, alternant à la DSI de ManpowerGroup. Je m'intéresse particulièrement à la cybersécurité et à l'intelligence artificielle.",
     ville: "Mennecy (91)",
     email: "juanstein91@gmail.com",
     linkedin: "https://www.linkedin.com/in/juan-stein-7b95b0366",
@@ -32,9 +32,9 @@ const SITE = {
     presentation: [
       "Je m'appelle Juan Stein et je suis en deuxième année de BTS Services Informatiques aux Organisations (SIO), option SISR (Solutions d'Infrastructure, Systèmes et Réseaux), au CFA ITIS d'Évry.",
       "Je suis ma formation en alternance, en contrat d'apprentissage sur 24 mois : une partie de la semaine en formation, le reste à la DSI de ManpowerGroup à La Défense.",
-      "Ce qui m'intéresse le plus, c'est l'infrastructure : comprendre comment un réseau, un serveur ou un annuaire fonctionne, le mettre en place et le dépanner."
+      "Ce qui m'intéresse le plus, c'est la cybersécurité et l'intelligence artificielle : comprendre comment protéger un système d'information, et comment l'IA change le travail des équipes informatiques. C'est d'ailleurs le sujet de ma veille technologique."
     ],
-    objectifs: "Après le BTS, je souhaite poursuivre en bac+3 puis en master dans les systèmes, les réseaux et l'infrastructure.",
+    objectifs: "Après le BTS, je souhaite poursuivre en licence orientée cybersécurité et intelligence artificielle, puis en master dans ce même domaine.",
     entreprise: {
       nom: "ManpowerGroup",
       activite: "Groupe international de solutions en ressources humaines : travail temporaire, recrutement et accompagnement des carrières.",
@@ -49,9 +49,11 @@ const SITE = {
   /* ---------- 3. Parcours (frise chronologique) ---------- */
   /* Pour ajouter une étape : copie un bloc { ... }, colle-le, modifie-le. */
   parcours: [
-    { date: "2025 – 2027", titre: "BTS SIO option SISR, en alternance", lieu: "CFA ITIS, Évry", texte: "Contrat d'apprentissage de 24 mois." },
+    { date: "Depuis la rentrée 2026", titre: "Extra en restauration", lieu: "Hôtel Mercure", texte: "Service en restauration, en parallèle de mes études." },
     { date: "Depuis août 2025", titre: "Alternant informatique, DSI", lieu: "ManpowerGroup, La Défense", texte: "Support aux utilisateurs, base de connaissances, ServiceNow." },
+    { date: "2025 – 2027", titre: "BTS SIO option SISR, en alternance", lieu: "CFA ITIS, Évry", texte: "Contrat d'apprentissage de 24 mois." },
     { date: "Oct. 2024 – mai 2025", titre: "Agent de production", lieu: "X-FAB", texte: "Production en salle blanche, respect strict des procédures." },
+    { date: "Juil. 2024 – sept. 2024", titre: "Extra en restauration", lieu: "L'Atelier Corse", texte: "Service en restauration pendant l'été." },
     { date: "2021 – 2024", titre: "Baccalauréat général", lieu: "Lycée Marie Laurencin", texte: "Spécialités mathématiques et SVT." }
   ],
 
@@ -245,20 +247,20 @@ const SITE = {
     /* Pour ajouter une synthèse : copie un bloc { ... } et mets-le EN PREMIER (la plus récente en haut). */
     articles: [
       {
+        date: "02/12/2026",
+        titre: "Copilot dans Intune et Entra : l'IA arrive dans les consoles d'administration Microsoft",
+        source: "Microsoft Security Blog (14/07/2025) ; documentation Microsoft Learn",
+        lien: "https://microsoft.com/en-us/security/blog/2025/07/14/improving-it-efficiency-with-microsoft-security-copilot-in-microsoft-intune-and-microsoft-entra",
+        resume: "Microsoft a intégré Security Copilot dans Intune (gestion des postes) et Entra (gestion des identités). L'administrateur pose une question en langage naturel, par exemple « quels appareils n'ont pas la dernière version de Windows ? », et obtient la réponse et les actions possibles. Copilot respecte les rôles déjà attribués : un administrateur ne voit que les données auxquelles il a droit.",
+        analyse: "C'est directement lié à ce que j'apprends avec Active Directory et les GPO. Le point qui me paraît le plus important, c'est le respect des droits : l'IA ne doit pas donner plus d'accès que le compte de l'administrateur. L'ANSSI insiste aussi, dans son guide sur la sécurité des systèmes d'IA générative, sur la maîtrise des accès à privilèges. La gestion des habilitations reste donc une compétence de base, même avec l'IA."
+      },
+      {
         date: "25/11/2026",
         titre: "Des agents d'IA qui dépannent le réseau : où en est-on ?",
         source: "Cisco, rapport « The Impact of Agentic AI on Network Operations » (23/09/2026) ; Le Monde Informatique (2026)",
         lien: "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html",
         resume: "Cisco a publié en septembre 2026 une étude réalisée par Omdia auprès de 1 000 responsables IT et réseau. Elle indique que les entreprises passent d'une IA qui conseille à des agents d'IA qui agissent : l'équipe réseau fixe l'objectif et les limites, puis les agents analysent et corrigent. Des éditeurs comme NetBrain proposent déjà des agents qui cherchent la cause d'une panne réseau et proposent une solution.",
         analyse: "Pour un technicien, cela ne supprime pas le besoin de connaître le réseau : il faut savoir vérifier ce que l'agent propose. Le Monde Informatique rappelle que les modèles génériques peuvent « halluciner » et manquer de contexte. Sur mon TP Packet Tracer, si un outil me proposait une ACL, je devrais toujours comprendre chaque ligne et la tester avant de l'appliquer."
-      },
-      {
-        date: "25/11/2026",
-        titre: "Copilot dans Intune et Entra : l'IA arrive dans les consoles d'administration Microsoft",
-        source: "Microsoft Security Blog (14/07/2025) ; documentation Microsoft Learn",
-        lien: "https://microsoft.com/en-us/security/blog/2025/07/14/improving-it-efficiency-with-microsoft-security-copilot-in-microsoft-intune-and-microsoft-entra",
-        resume: "Microsoft a intégré Security Copilot dans Intune (gestion des postes) et Entra (gestion des identités). L'administrateur pose une question en langage naturel, par exemple « quels appareils n'ont pas la dernière version de Windows ? », et obtient la réponse et les actions possibles. Copilot respecte les rôles déjà attribués : un administrateur ne voit que les données auxquelles il a droit.",
-        analyse: "C'est directement lié à ce que j'apprends avec Active Directory et les GPO. Le point qui me paraît le plus important, c'est le respect des droits : l'IA ne doit pas donner plus d'accès que le compte de l'administrateur. L'ANSSI insiste aussi, dans son guide sur la sécurité des systèmes d'IA générative, sur la maîtrise des accès à privilèges. La gestion des habilitations reste donc une compétence de base, même avec l'IA."
       }
     ]
   }

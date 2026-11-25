@@ -65,7 +65,7 @@ main { padding: 48px 0 72px; }
 
 /* Accueil */
 .hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center; padding: 24px 0 56px; }
-.hero .photo { border-radius: 20px; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; max-width: 360px; justify-self: end; }
+.hero .photo { border-radius: 50%; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; max-width: 360px; justify-self: end; }
 .hero p.muted { font-size: 1.1rem; max-width: 560px; }
 
 /* Boutons */
@@ -130,7 +130,7 @@ th { color: var(--texte-gris); font-weight: 600; }
 .niveau { font-size: .75rem; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
 .niveau-acquis { background: rgba(48, 209, 88, .15); color: #4cd97b; }
 .niveau-en-cours { background: rgba(47, 140, 255, .15); color: var(--accent-clair); }
-.niveau-decouvert { background: #2a2a2e; color: var(--texte-gris); }
+.niveau-decouvert { background: rgba(191, 90, 242, .16); color: #cf8cf5; }
 
 /* Veille */
 .article { margin-bottom: 18px; }
