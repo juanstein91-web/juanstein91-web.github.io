@@ -49,7 +49,8 @@ const SITE = {
   /* ---------- 3. Parcours (frise chronologique) ---------- */
   /* Pour ajouter une étape : copie un bloc { ... }, colle-le, modifie-le. */
   parcours: [
-    { date: "Depuis la rentrée 2026", titre: "Extra en restauration", lieu: "Hôtel Mercure, Le Coudray-Montceaux", texte: "Service en restauration, en parallèle de mes études." },
+    { date: "Depuis la rentrée 2026", titre: "Serveur (extra)", lieu: "Hôtel Mercure, Le Coudray-Montceaux", texte: "Mise en place et service des séminaires (des centaines de personnes), gestion du bar." },
+    { date: "Avril 2026 (2 mois)", titre: "Extra en logistique", lieu: "Del Gaudio Gourmet, Rungis", texte: "Préparation des commandes pour les camions, gestion des palettes dans le hangar." },
     { date: "Depuis août 2025", titre: "Alternant informatique, DSI", lieu: "ManpowerGroup, La Défense", texte: "Support aux utilisateurs, base de connaissances, ServiceNow." },
     { date: "2025 – 2027", titre: "BTS SIO option SISR, en alternance", lieu: "CFA ITIS, Évry", texte: "Contrat d'apprentissage de 24 mois." },
     { date: "Oct. 2024 – mai 2025", titre: "Agent de production", lieu: "X-FAB", texte: "Production en salle blanche, respect strict des procédures." },
@@ -121,6 +122,12 @@ const SITE = {
         { nom: "GPO de sécurité (mots de passe, verrouillage)", niveau: "decouvert", contexte: "TP3 Medilog" },
         { nom: "ACL et accès SSH sur routeurs Cisco", niveau: "decouvert", contexte: "TP Packet Tracer Medilog" },
         { nom: "Snapshots et retour arrière", niveau: "decouvert", contexte: "TP1 et TP2 Medilog" }
+      ]
+    },
+    {
+      categorie: "Intelligence artificielle",
+      elements: [
+        { nom: "Outils d'IA générative (rédaction de prompts, vérification des réponses)", niveau: "acquis", contexte: "Usage régulier, sujet de ma veille technologique" }
       ]
     },
     {
