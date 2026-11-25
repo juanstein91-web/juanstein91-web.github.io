@@ -49,10 +49,10 @@ const SITE = {
   /* ---------- 3. Parcours (frise chronologique) ---------- */
   /* Pour ajouter une étape : copie un bloc { ... }, colle-le, modifie-le. */
   parcours: [
-    { date: "Depuis la rentrée 2026", titre: "Serveur (extra)", lieu: "Hôtel Mercure, Le Coudray-Montceaux", texte: "Mise en place et service des séminaires (des centaines de personnes), gestion du bar." },
-    { date: "Avril 2026 (2 mois)", titre: "Extra en logistique", lieu: "Del Gaudio Gourmet, Rungis", texte: "Préparation des commandes pour les camions, gestion des palettes dans le hangar." },
     { date: "Depuis août 2025", titre: "Alternant informatique, DSI", lieu: "ManpowerGroup, La Défense", texte: "Support aux utilisateurs, base de connaissances, ServiceNow." },
     { date: "2025 – 2027", titre: "BTS SIO option SISR, en alternance", lieu: "CFA ITIS, Évry", texte: "Contrat d'apprentissage de 24 mois." },
+    { date: "Depuis la rentrée 2026", titre: "Serveur (extra)", lieu: "Hôtel Mercure, Le Coudray-Montceaux", texte: "Mise en place et service des séminaires (des centaines de personnes), gestion du bar." },
+    { date: "Avril 2026 (2 mois)", titre: "Extra en logistique", lieu: "Del Gaudio Gourmet, Rungis", texte: "Préparation des commandes pour les camions, gestion des palettes dans le hangar." },
     { date: "Oct. 2024 – mai 2025", titre: "Agent de production", lieu: "X-FAB", texte: "Production en salle blanche, respect strict des procédures." },
     { date: "Juil. 2024 – sept. 2024", titre: "Extra en restauration", lieu: "L'Atelier Corse, Mennecy", texte: "Service en restauration pendant l'été." },
     { date: "2021 – 2024", titre: "Baccalauréat général", lieu: "Lycée Marie Laurencin", texte: "Spécialités mathématiques et SVT." }
