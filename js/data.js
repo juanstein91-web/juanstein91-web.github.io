@@ -49,11 +49,11 @@ const SITE = {
   /* ---------- 3. Parcours (frise chronologique) ---------- */
   /* Pour ajouter une étape : copie un bloc { ... }, colle-le, modifie-le. */
   parcours: [
-    { date: "Depuis la rentrée 2026", titre: "Extra en restauration", lieu: "Hôtel Mercure", texte: "Service en restauration, en parallèle de mes études." },
+    { date: "Depuis la rentrée 2026", titre: "Extra en restauration", lieu: "Hôtel Mercure, Le Coudray-Montceaux", texte: "Service en restauration, en parallèle de mes études." },
     { date: "Depuis août 2025", titre: "Alternant informatique, DSI", lieu: "ManpowerGroup, La Défense", texte: "Support aux utilisateurs, base de connaissances, ServiceNow." },
     { date: "2025 – 2027", titre: "BTS SIO option SISR, en alternance", lieu: "CFA ITIS, Évry", texte: "Contrat d'apprentissage de 24 mois." },
     { date: "Oct. 2024 – mai 2025", titre: "Agent de production", lieu: "X-FAB", texte: "Production en salle blanche, respect strict des procédures." },
-    { date: "Juil. 2024 – sept. 2024", titre: "Extra en restauration", lieu: "L'Atelier Corse", texte: "Service en restauration pendant l'été." },
+    { date: "Juil. 2024 – sept. 2024", titre: "Extra en restauration", lieu: "L'Atelier Corse, Mennecy", texte: "Service en restauration pendant l'été." },
     { date: "2021 – 2024", titre: "Baccalauréat général", lieu: "Lycée Marie Laurencin", texte: "Spécialités mathématiques et SVT." }
   ],
 
@@ -229,6 +229,80 @@ const SITE = {
         { nom: "Fiche SP1 du TP2 (PDF)", fichier: "assets/documents/fiche-sp1-tp2.pdf" },
         { nom: "Script PowerShell : OU, utilisateurs et groupes", fichier: "assets/documents/script-tp2-ou-utilisateurs-groupes.ps1" }
       ]
+    },
+
+    {
+      id: "base-connaissances-servicenow",
+      titre: "Transfert et mise à jour de la base de connaissances du help-desk vers ServiceNow",
+      resume: "Reprise des consignes du Wiki, mise à jour ou création avec les responsables applicatifs, puis intégration dans ServiceNow pour le help-desk.",
+      cadre: "Réalisation en milieu professionnel (1re année, ManpowerGroup)",
+      periode: "Octobre 2025 – juin 2026",
+      technologies: ["ServiceNow", "Wiki interne", "Documentation technique"],
+      image: "",
+
+      /* 1. Titre et contexte */
+      contexte: "À la DSI de ManpowerGroup, un help-desk situé au Maroc traite les demandes d'assistance des utilisateurs. Pour chaque application, il s'appuie sur des consignes qui étaient rangées dans un Wiki. La DSI a choisi ServiceNow comme nouvelle base de connaissances.",
+
+      /* 2. Besoin et objectifs */
+      besoin: "Le help-desk a besoin de consignes à jour, centralisées dans un seul outil, pour traiter correctement les demandes concernant chaque application.",
+      objectifs: [
+        "Reprendre toutes les consignes existantes du Wiki, application par application.",
+        "Mettre à jour les consignes dépassées et créer celles qui manquaient, avec les responsables applicatifs.",
+        "Intégrer les consignes dans ServiceNow, la nouvelle base de connaissances."
+      ],
+
+      /* 3. Environnement */
+      environnement: [
+        ["Élément", "Rôle"],
+        ["Wiki interne", "Ancienne base des consignes"],
+        ["ServiceNow", "Nouvelle base de connaissances"],
+        ["Responsables applicatifs", "Valident le contenu des consignes de leur application"],
+        ["Help-desk (Maroc)", "Utilise les consignes pour traiter les demandes"]
+      ],
+      environnementNote: "",
+
+      /* 4. Travail réalisé */
+      etapes: [
+        "Reprise de toutes les consignes existantes sur le Wiki, pour au moins 20 applications (environ 15 consignes par application).",
+        "Réécriture des consignes contradictoires ou trop techniques, pour qu'elles soient compréhensibles par le help-desk.",
+        "Mise à jour des consignes incomplètes et création des consignes manquantes, avec le responsable applicatif concerné.",
+        "Vérification de mon travail par ma tutrice avant chaque envoi.",
+        "Insertion des consignes dans ServiceNow."
+      ],
+
+      /* 5. Contribution personnelle */
+      contribution: [
+        "J'ai travaillé seul sur ce transfert, d'octobre 2025 à juin 2026.",
+        "J'ai repris les consignes du Wiki, échangé avec les responsables applicatifs, mis à jour ou rédigé les consignes, puis je les ai intégrées dans ServiceNow.",
+        "Ma tutrice vérifiait mon travail avant chaque envoi."
+      ],
+
+      /* 6. Difficultés : à compléter */
+      difficultes: [
+        { probleme: "Certaines consignes étaient contradictoires, et beaucoup n'étaient pas compréhensibles par le help-desk à cause du vocabulaire technique.", solution: "Je les ai réécrites avec des mots simples, pour qu'une personne sans connaissances techniques puisse les suivre." },
+        { probleme: "Des consignes étaient manquantes ou incomplètes.", solution: "Je les ai complétées ou créées avec le responsable applicatif concerné." },
+        { probleme: "Les responsables applicatifs ne répondaient pas toujours, et trouver un créneau avec eux était difficile à cause de leur emploi du temps chargé.", solution: "Je les relançais plusieurs fois par mail et par Teams. Sans réponse, je demandais à ma tutrice de les contacter pour débloquer la situation." }
+      ],
+      recul: "",
+
+      /* 7. Tests et résultat */
+      tests: [
+        ["Vérification", "Par qui"],
+        ["Relecture du contenu de chaque consigne", "Responsable applicatif concerné"],
+        ["Contrôle avant chaque envoi", "Ma tutrice"],
+        ["Utilisation des consignes pour traiter les demandes", "Help-desk (Maroc)"],
+        ["Retours sur les consignes", "Utilisateurs"]
+      ],
+      resultat: "Les consignes du help-desk sont centralisées dans ServiceNow, qui remplace le Wiki comme base de connaissances.",
+
+      /* 8. Compétences et preuves */
+      competencesBloc1: [
+        { nom: "Gérer le patrimoine informatique", detail: "Exploiter des référentiels : reprise et mise à jour de la documentation de chaque application." },
+        { nom: "Répondre aux incidents et aux demandes d'assistance et d'évolution", detail: "Donner au help-desk les consignes qui lui servent à traiter les demandes des utilisateurs." }
+      ],
+      preuves: [],
+      preuvesNote: "Je ne peux pas publier de captures : la base de connaissances contient des données internes à ManpowerGroup. Une attestation de ma tutrice peut servir de preuve.",
+      documents: []
     }
   ],
 

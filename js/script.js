@@ -13,6 +13,9 @@ function $(id) { return document.getElementById(id); }
 /* Transforme une liste de textes en <li> */
 function liste(items) { return items.map(t => `<li>${t}</li>`).join(""); }
 
+/* Texte affiché quand une rubrique n'est pas encore remplie */
+const A_COMPLETER = `<p class="a-completer">À compléter.</p>`;
+
 /* Transforme un tableau [[entêtes], [ligne], ...] en <table> */
 function tableau(lignes) {
   const [entetes, ...corps] = lignes;
@@ -113,7 +116,7 @@ function pageAPropos() {
 function pageRealisations() {
   $("liste-realisations").innerHTML = SITE.realisations.map(r => `
     <a class="carte lien-carte carte-image" href="realisation.html?id=${r.id}">
-      <img src="${r.image}" alt="" loading="lazy">
+      ${r.image ? `<img src="${r.image}" alt="" loading="lazy">` : `<div class="sans-image">${r.technologies[0]}</div>`}
       <div>
         <p class="etiquette">${r.cadre} · ${r.periode}</p>
         <h3>${r.titre}</h3>
@@ -144,28 +147,29 @@ function pageRealisation() {
 
     <section id="r2"><h2>2. Besoin et objectifs</h2><p>${r.besoin}</p><ul>${liste(r.objectifs)}</ul></section>
 
-    <section id="r3"><h2>3. Environnement</h2>${tableau(r.environnement)}<p class="muted">${r.environnementNote}</p></section>
+    <section id="r3"><h2>3. Environnement</h2>${tableau(r.environnement)}${r.environnementNote ? `<p class="muted">${r.environnementNote}</p>` : ""}</section>
 
     <section id="r4"><h2>4. Travail réalisé</h2><ol>${liste(r.etapes)}</ol></section>
 
     <section id="r5"><h2>5. Contribution personnelle</h2><ul>${liste(r.contribution)}</ul></section>
 
     <section id="r6"><h2>6. Difficultés rencontrées</h2>
-      ${r.difficultes.map(d => `<div class="carte difficulte"><p><strong>Problème :</strong> ${d.probleme}</p><p><strong>Solution :</strong> ${d.solution}</p></div>`).join("")}
-      <p><strong>Avec du recul :</strong> ${r.recul}</p>
+      ${r.difficultes.length ? r.difficultes.map(d => `<div class="carte difficulte"><p><strong>Problème :</strong> ${d.probleme}</p><p><strong>Solution :</strong> ${d.solution}</p></div>`).join("") : A_COMPLETER}
+      ${r.recul ? `<p><strong>Avec du recul :</strong> ${r.recul}</p>` : ""}
     </section>
 
-    <section id="r7"><h2>7. Tests et résultat</h2>${tableau(r.tests)}<p>${r.resultat}</p></section>
+    <section id="r7"><h2>7. Tests et résultat</h2>${r.tests ? tableau(r.tests) : A_COMPLETER}<p>${r.resultat}</p></section>
 
     <section id="r8"><h2>8. Compétences et preuves</h2>
       <h3>Compétences du Bloc 1 mobilisées</h3>
       <ul>${r.competencesBloc1.map(c => `<li><strong>${c.nom}</strong> : ${c.detail}</li>`).join("")}</ul>
       <h3>Captures d'écran</h3>
+      ${r.preuves.length ? "" : (r.preuvesNote ? `<p class="muted">${r.preuvesNote}</p>` : A_COMPLETER)}
       <div class="galerie">${r.preuves.map(pr => `
         <figure><a href="${dossier}${pr.image}" target="_blank" rel="noopener"><img src="${dossier}${pr.image}" alt="${pr.legende}"></a><figcaption>${pr.legende}</figcaption></figure>`).join("")}
       </div>
       <h3>Documents</h3>
-      <ul>${r.documents.map(d => `<li><a href="${d.fichier}" target="_blank" rel="noopener">${d.nom}</a></li>`).join("")}</ul>
+      ${r.documents.length ? `<ul>${r.documents.map(d => `<li><a href="${d.fichier}" target="_blank" rel="noopener">${d.nom}</a></li>`).join("")}</ul>` : A_COMPLETER}
     </section>`;
 }
 

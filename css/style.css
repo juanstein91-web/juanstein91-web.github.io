@@ -65,7 +65,7 @@ main { padding: 48px 0 72px; }
 
 /* Accueil */
 .hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center; padding: 24px 0 56px; }
-.hero .photo { border-radius: 50%; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; max-width: 360px; justify-self: end; }
+.hero .photo { border-radius: 42% / 34%; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; max-width: 360px; justify-self: end; }
 .hero p.muted { font-size: 1.1rem; max-width: 560px; }
 
 /* Boutons */
@@ -154,3 +154,8 @@ footer .conteneur { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-cont
 /* Cartes de compétences un peu plus larges pour laisser la place aux niveaux */
 #competences { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
 @media (max-width: 420px) { #competences { grid-template-columns: 1fr; } .liste-competences li { flex-direction: column; align-items: flex-start; } }
+
+/* Rubrique pas encore remplie */
+.a-completer { color: var(--texte-gris); font-style: italic; }
+/* Réalisation sans capture : bloc de couleur à la place de l'image */
+.sans-image { aspect-ratio: 16 / 9; border-radius: 10px; border: 1px solid var(--bordure); background: #1a2333; color: var(--accent-clair); display: flex; align-items: center; justify-content: center; font-weight: 600; }
